@@ -178,7 +178,7 @@
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid rgb(212,175,55);
   }
 }
 
@@ -281,11 +281,11 @@ a:focus, a:hover {
 }
 
 .bg-primary {
-  background-color: #64a19d !important;
+  background-color: rgb(212,175,55) !important;
 }
 
 .text-primary {
-  color: #64a19d !important;
+  color: rgb(212,175,55) !important;
 }
 
 footer {
