@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Joel Mesmer">
+
+  <link
+		rel="shortcut icon"
+		href="{{ ('/assets/msmr/img/logo_M_fav.png') | abs_url }}"
+		type="image/x-icon"
+	>
+	
+  <title>m:sm:r</title>
+  
+  <link href="assets/msmr/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/msmr/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="assets/msmr/css/msmr.css" rel="stylesheet">
+  {%- for link in web_include_css %}
+	<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
+  {%- endfor -%}
+  {%- block style %}{%- endblock -%}
+	<script>
+		window.frappe = {};
+		frappe.ready_events = [];
+		frappe.ready = function(fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = {{ dev_server }};
+		window.socketio_port = {{ frappe.socketio_port }};
+    </script>
+</head>
+<body id="page-top" frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}" data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {% endif -%}>
+
+<!--<body id="page-top">-->
+{%- block navbar -%}
+		{% include "msmr/templates/navbar.html" %}
+	{%- endblock -%}
+  
+{% block content %}
+		{{ content or '' }}
+	{% endblock %}
+	
+	{%- block page_content -%}{%- endblock -%}
+
+  
+<!-- js should be loaded in body! -->
+	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/assets/js/bootstrap-4-web.min.js"></script>
+
+
+	{%- for link in web_include_js %}
+	<script type="text/javascript" src="{{ link | abs_url }}"></script>
+	{%- endfor -%}
+  <!-- Bootstrap core JavaScript -->
+  <!--<script src="assets/msmr/vendor/jquery/jquery.min.js"></script>-->
+  <script src="assets/msmr/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="assets/msmr/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="assets/msmr/js/msmr.js"></script>
+
+	
+
+	{%- block script %}{%- endblock %}
+	<!-- csrf_token -->
+	{%- block body_include %}{{ body_include or "" }}{% endblock -%}
+</body>
+
+</html>

@@ -13,14 +13,14 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
-
+base_template_path = "/msmr/templates/base.html"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/msmr/css/msmr.css"
 # app_include_js = "/assets/msmr/js/msmr.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/msmr/css/msmr.css"
-# web_include_js = "/assets/msmr/js/msmr.js"
+web_include_css = "/assets/msmr/css/msmr.css"
+web_include_js = "/assets/msmr/js/msmr.js"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
@@ -35,7 +35,7 @@ app_license = "MIT"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "msmr"
 
 # website user home page (by Role)
 # role_home_page = {
