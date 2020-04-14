@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 import frappe
 import frappe.utils
-from frappe.utils.oauth import get_oauth2_authorize_url, get_oauth_keys, login_via_oauth2, login_via_oauth2_id_token, login_oauth_user as _login_oauth_user, redirect_post_login, oauth_decoder
+from frappe.utils.oauth import get_oauth2_authorize_url, get_oauth_keys, login_via_oauth2, login_via_oauth2_id_token, login_oauth_user as _login_oauth_user, redirect_post_login #, oauth_decoder
 import json
 from frappe import _
 from frappe.auth import LoginManager
@@ -53,25 +53,25 @@ def get_context(context):
 
 	return context
 
-@frappe.whitelist(allow_guest=True)
-def login_via_google(code, state):
-	login_via_oauth2("google", code, state, decoder=oauth_decoder)
+# @frappe.whitelist(allow_guest=True)
+# def login_via_google(code, state):
+	# login_via_oauth2("google", code, state, decoder=oauth_decoder)
 
-@frappe.whitelist(allow_guest=True)
-def login_via_github(code, state):
-	login_via_oauth2("github", code, state)
+# @frappe.whitelist(allow_guest=True)
+# def login_via_github(code, state):
+	# login_via_oauth2("github", code, state)
 
-@frappe.whitelist(allow_guest=True)
-def login_via_facebook(code, state):
-	login_via_oauth2("facebook", code, state, decoder=oauth_decoder)
+# @frappe.whitelist(allow_guest=True)
+# def login_via_facebook(code, state):
+	# login_via_oauth2("facebook", code, state, decoder=oauth_decoder)
 
-@frappe.whitelist(allow_guest=True)
-def login_via_frappe(code, state):
-	login_via_oauth2("frappe", code, state, decoder=oauth_decoder)
+# @frappe.whitelist(allow_guest=True)
+# def login_via_frappe(code, state):
+	# login_via_oauth2("frappe", code, state, decoder=oauth_decoder)
 
-@frappe.whitelist(allow_guest=True)
-def login_via_office365(code, state):
-	login_via_oauth2_id_token("office_365", code, state, decoder=oauth_decoder)
+# @frappe.whitelist(allow_guest=True)
+# def login_via_office365(code, state):
+	# login_via_oauth2_id_token("office_365", code, state, decoder=oauth_decoder)
 
 @frappe.whitelist(allow_guest=True)
 def login_oauth_user(data=None, provider=None, state=None, email_id=None, key=None, generate_login_token=False):
