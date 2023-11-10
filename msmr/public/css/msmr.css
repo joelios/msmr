@@ -181,7 +181,7 @@
     border-left: 0.5rem solid rgb(212,175,55);
   }
   .projects-section .featured-text-left {
-    padding: 0 2 0 0rem;
+    padding: 0 2rem 0 0;
     border-right: 0.5rem solid rgb(212,175,55);
   }
 }
