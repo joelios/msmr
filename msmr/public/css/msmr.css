@@ -50,10 +50,10 @@
     color: #f4924b;
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    font-weight: bold;
   }
   #mainNav .nav-link:active {
-    color: white;
+    font-weight: bold;
   }
   #mainNav.navbar-shrink {
     background-color: #fff;
@@ -278,7 +278,7 @@ a {
 
 a:focus, a:hover {
   text-decoration: none;
-  color: white;
+  font-weight: bold;
 }
 
 .bg-black {
