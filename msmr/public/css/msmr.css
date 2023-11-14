@@ -6,7 +6,7 @@
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color:  rgb(212,175,55);
+  color:  #f4924b;
   border: none;
 }
 
@@ -42,12 +42,12 @@
   }
   #mainNav .navbar-brand {
     padding: .5rem 0;
-    color: rgb(212,175,55);
+    color: #f4924b;
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgb(212,175,55);
+    color: #f4924b;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -67,15 +67,15 @@
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color:  rgb(212,175,55);
+    color:  #f4924b;
   }
   #mainNav.navbar-shrink .nav-link:active {
     color: #467370;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color:  rgb(212,175,55);
+    color:  #f4924b;
     outline: none;
-    border-bottom: 0.25rem solid rgb(212,175,55);
+    border-bottom: 0.25rem solid #f4924b;
   }
 }
 
@@ -141,16 +141,16 @@
 }
 
 .btn-primary {
-  background-color: rgb(212,175,55);
+  background-color: #f4924b;
 }
 
 .btn-primary:hover {
   background-color: white;
-  color: rgb(212,175,55);
+  color: #f4924b;
 }
 
 .btn-primary:focus {
-  background-color: rgb(212,175,55);
+  background-color: #f4924b;
   color: white;
 }
 
@@ -178,11 +178,11 @@
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid rgb(212,175,55);
+    border-left: 0.5rem solid #f4924b;
   }
   .projects-section .featured-text-left {
     padding: 0 2rem 0 0;
-    border-right: 0.5rem solid rgb(212,175,55);
+    border-right: 0.5rem solid #f4924b;
     margin-right: -0.5rem;
   }
 }
@@ -197,7 +197,7 @@
     padding: 5rem;
   }
   .projects-section .project-text hr {
-    border-color:  rgb(212,175,55);
+    border-color:  #f4924b;
     border-width: .25rem;
     width: 30%;
   }
@@ -229,7 +229,7 @@
 
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid rgb(212,175,55);
+  border-bottom: 0.25rem solid #f4924b;
 }
 
 .contact-section .card h4 {
@@ -240,7 +240,7 @@
 }
 
 .contact-section .card hr {
-  border-color:  rgb(212,175,55);
+  border-color:  #f4924b;
   border-width: 0.25rem;
   width: 3rem;
 }
@@ -260,7 +260,7 @@
 }
 
 .contact-section .social a:hover {
-  color: rgb(212,175,55);
+  color: #f4924b;
 }
 
 .contact-section .social a:active {
@@ -273,7 +273,7 @@ body {
 }
 
 a {
-  color:  rgb(212,175,55);
+  color:  #f4924b;
 }
 
 a:focus, a:hover {
@@ -286,11 +286,11 @@ a:focus, a:hover {
 }
 
 .bg-primary {
-  background-color: rgb(212,175,55) !important;
+  background-color: #f4924b !important;
 }
 
 .text-primary {
-  color: rgb(212,175,55) !important;
+  color: #f4924b !important;
 }
 
 footer {
