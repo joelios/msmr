@@ -296,3 +296,7 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+
+.text-orange {
+    color: #f4924b !important;
+}
