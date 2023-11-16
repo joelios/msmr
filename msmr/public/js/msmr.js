@@ -50,7 +50,7 @@
         console.log("hani Date:")
         console.log(anlagedaten)
         frappe.call({
-            method: "msmr.www.msmr.create_idee.suche",
+            method: "msmr.www.msmr.create_idee",
             args:{
                     'anlagedaten': anlagedaten
             },
