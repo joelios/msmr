@@ -40,7 +40,11 @@
   $(window).scroll(navbarCollapse);
   
   // Closes responsive menu when a scroll trigger link is clicked
-  $('#ideebtn').off("click");
+  
+
+})(jQuery); // End of use strict
+
+$('#ideebtn').off("click");
   $('#ideebtn').click(function() {
         var anlagedaten = {
             'vor_nachnamen': $("#inputname").val(),
@@ -64,5 +68,3 @@
             }
         });
   });
-
-})(jQuery); // End of use strict
