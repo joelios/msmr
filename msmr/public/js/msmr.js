@@ -61,7 +61,7 @@ $('#ideebtn').off("click");
             freeze_message: 'Ihre Idee wird eingereicht...',
             callback: function(r)
             {
-                frappe.msgprint("Vielen Dank für Ihren Input!");
+                frappe.msgprint("Vielen Dank für Ihren Input!", "Ideen Briefkasten");
                 $("#inputname").val('');
                 $("#inputEmail").val('');
                 $("#inputIdee").val('');

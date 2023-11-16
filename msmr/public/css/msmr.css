@@ -300,3 +300,11 @@ footer {
 .text-orange {
     color: #f4924b !important;
 }
+
+.hidden {
+    display: None !important;
+}
+
+.msgprint-dialog .modal-header button {
+    display: None !important;
+}
