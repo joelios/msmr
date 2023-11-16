@@ -41,11 +41,14 @@
   
   // Closes responsive menu when a scroll trigger link is clicked
   $('#ideebtn').click(function() {
+        console.log("bini da");
         var anlagedaten = {
             'vor_nachnamen': $("#inputname").val(),
             'email': $("#inputEmail").val(),
             'idee': $("#inputIdee").val()
         };
+        console.log("hani Date:")
+        console.log(anlagedaten)
         frappe.call({
             method: "msmr.www.msmr.create_idee.suche",
             args:{
@@ -55,6 +58,7 @@
             freeze_message: 'Ihre Idee wird eingereicht...',
             callback: function(r)
             {
+                console.log("hani feedback")
                 frappe.msgprint("Vielen Dank für Ihren Input!");
                 $("#inputname").val('');
                 $("#inputEmail").val('');
