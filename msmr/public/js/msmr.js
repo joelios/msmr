@@ -38,5 +38,29 @@
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
+  
+  // Closes responsive menu when a scroll trigger link is clicked
+  $('#ideebtn').click(function() {
+        var anlagedaten = {
+            'vor_nachnamen': $("#inputname").val(),
+            'email': $("#inputEmail").val(),
+            'idee': $("#inputIdee").val()
+        };
+        frappe.call({
+            method: "msmr.www.msmr.create_idee.suche",
+            args:{
+                    'anlagedaten': anlagedaten
+            },
+            freeze: true,
+            freeze_message: 'Ihre Idee wird eingereicht...',
+            callback: function(r)
+            {
+                frappe.msgprint("Vielen Dank für Ihren Input!");
+                $("#inputname").val('');
+                $("#inputEmail").val('');
+                $("#inputIdee").val('');
+            }
+        });
+  });
 
 })(jQuery); // End of use strict
